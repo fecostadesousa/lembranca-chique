@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    <%= title %>
+  </title>
+
+  <link rel='stylesheet' href='/bower_components/semantic/dist/semantic.css' />
+  <link rel='stylesheet' href='/bower_components/slick-carousel/slick/slick.css' />
+  <link rel='stylesheet' href='/public/stylesheets/style.css' />
+
+</head>
+
+<body>
+    <% include partials/header.ejs %>
+    <% include partials/menu.ejs %>
+    <% include partials/banner.ejs %>
+    <% include partials/lancamentos.ejs %>
+    <% include partials/destaques.ejs %>
+    <% include partials/top_sellers.ejs %>
+    <% include partials/bottom.ejs %>
+
+
+
+          <!-- JS -->
+          <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+          <script src="/bower_components/semantic/dist/semantic.min.js"></script>
+          <script src="/bower_components/slick-carousel/slick/slick.min.js"></script>
+
+          <script type="text/javascript">
+            jQuery(document).ready(function ($) {
+              $(".banners").slick({
+                dots: true,
+                arrows: false
+              });
+
+              $(".lancamentos").slick({
+                dots: false,
+                arrows: true,
+                prevArrow: '<i class="ui icon pink chevron circle left seta seta-esquerda"></i>',
+                nextArrow: '<i class="ui seta-direita icon pink chevron circle right seta seta-direita"></i>',
+                slidesToShow: 4
+              });
+
+              $(".destaques").slick({
+                dots: false,
+                arrows: true,
+                prevArrow: '<i class="ui icon pink chevron circle left seta seta-esquerda"></i>',
+                nextArrow: '<i class="ui seta-direita icon pink chevron circle right seta seta-direita"></i>',
+                slidesToShow: 4
+              });
+
+            });
+
+          </script>
+
+</body>
+
+</html>
